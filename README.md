@@ -54,6 +54,7 @@ Exercício 07
 
 Receba um valor inteiro. Verifique e mostre se ele é divisível por 2 e 3.
 
+
 Exercício 08
 
 

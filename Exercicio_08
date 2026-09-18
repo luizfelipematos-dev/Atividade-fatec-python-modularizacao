@@ -1,0 +1,40 @@
+hora_inicio: int = 0
+minuto_inicio: int = 0
+hora_final: int = 0
+minuto_final: int = 0
+
+inicio: int = 0
+fim: int = 0
+duracao: int = 0
+horas: int = 0
+minutos: int = 0
+
+def calcular():
+    global inicio, fim, duracao, horas, minutos
+
+    inicio = hora_inicio * 60 + minuto_inicio
+    fim = hora_final * 60 + minuto_final
+
+    if fim > inicio:
+        duracao = fim - inicio
+    else:
+        fim = fim + 1440
+        duracao = fim - inicio
+
+    horas = duracao // 60
+    minutos = duracao % 60
+
+def main():
+    global hora_inicio, minuto_inicio, hora_final, minuto_final
+
+    hora_inicio = int(input('Digite a hora que o jogo começou: '))
+    minuto_inicio = int(input('Digite o minuto que o jogo começou: '))
+    hora_final = int(input('Digite a hora que o jogo acabou: '))
+    minuto_final = int(input('Digite o minuto que o jogo acabou: '))
+
+    calcular()
+
+    print('A duração do jogo em horas é:', horas)
+    print('A duração do jogo em minutos é:', minutos)
+
+main()

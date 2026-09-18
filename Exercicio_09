@@ -1,0 +1,28 @@
+n1: int = 0
+n2: int = 0
+
+def calcular():
+    if n1 > n2:
+        if n1 % n2 == 0:
+            print(n1, 'é múltiplo de', n2)
+        else:
+            print(n1, 'não é múltiplo de', n2)
+
+    else:
+        if n2 > n1:
+            if n2 % n1 == 0:
+                print(n2, 'é múltiplo de', n1)
+            else:
+                print(n2, 'não é múltiplo de', n1)
+        else:
+            print('Números iguais')
+
+def main():
+    global n1, n2
+
+    n1 = int(input('Digite o primeiro numero: '))
+    n2 = int(input('Digite o segundo valor: '))
+
+    calcular()
+
+main()
